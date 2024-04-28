@@ -1,11 +1,15 @@
 document.addEventListener('scroll', function() {
     const scrollY = window.scrollY;
+
+    showElements('.section2-shortline, .section2-group');
     
-    if (scrollY >= 800 && scrollY <= 1062) {
+    if (scrollY >= 600 && scrollY <= 1800) {
         console.log('ScrollY:', scrollY);
-        showElements('.section2-shortline, .section2-group');
         restartAnimation('.section2-shortline, .section2-group');
-    }else{
+    }
+    
+
+    if (scrollY < 100 || scrollY > 2000) {
         hideElements('.section2-shortline, .section2-group');
     }
 

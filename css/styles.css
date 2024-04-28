@@ -59,32 +59,40 @@ html {
 /* 왼쪽 이미지 1 */
 #character-boxes-left .left-image1 {
     position: absolute;
-    top: -30vh; /* 원하는 시작 위치의 top 값 */
-    left: -100vh; /* 원하는 시작 위치의 left 값 */
+    width: 30vw;
+    height: auto;
+    top: -20vh; /* 원하는 시작 위치의 top 값 */
+    left: -85vh; /* 원하는 시작 위치의 left 값 */
     animation: move-left-image1 1s ease infinite; /* 왼쪽 이미지 1에 대한 애니메이션 */
 }
 
 /* 왼쪽 이미지 2 */
 #character-boxes-left .left-image2 {
     position: absolute;
-    top: -10vh; /* 원하는 시작 위치의 top 값 */
-    left: -80vh; /* 원하는 시작 위치의 left 값 */
+    width: 30vw;
+    height: auto;
+    top: 5vh; /* 원하는 시작 위치의 top 값 */
+    left: -60vh; /* 원하는 시작 위치의 left 값 */
     animation: move-left-image2 1s ease infinite; /* 왼쪽 이미지 2에 대한 애니메이션 */
 }
 
 /* 오른쪽 이미지 1 */
 #character-boxes-right .right-image1 {
     position: absolute;
-    top: -30vh; /* 원하는 시작 위치의 top 값 */
-    right: -100vh; /* 원하는 시작 위치의 right 값 */
+    width: 30vw;
+    height: auto;
+    top: -20vh; /* 원하는 시작 위치의 top 값 */
+    right: -85vh; /* 원하는 시작 위치의 right 값 */
     animation: move-right-image1 1s ease infinite; /* 오른쪽 이미지 1에 대한 애니메이션 */
 }
 
 /* 오른쪽 이미지 2 */
 #character-boxes-right .right-image2 {
     position: absolute;
-    top: -15vh; /* 원하는 시작 위치의 top 값 */
-    right: -80vh; /* 원하는 시작 위치의 right 값 */
+    width: 30vw;
+    height: auto;
+    top: 0vh; /* 원하는 시작 위치의 top 값 */
+    right: -60vh; /* 원하는 시작 위치의 right 값 */
     animation: move-right-image2 1s ease infinite; /* 오른쪽 이미지 2에 대한 애니메이션 */
 }
 
