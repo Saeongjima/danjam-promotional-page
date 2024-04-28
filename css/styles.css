@@ -161,12 +161,14 @@ html {
 }
 
 .section2-shortline {
-    margin-bottom: 100px;
+    width: 60%;
+    margin-bottom: 5%;
     animation: fadeIn 1s ease forwards;
     animation-delay: 0.3s;
 }
 
 .section2-group {
+    width: 90%;
     animation: fadeIn 1s ease forwards;
     animation-delay: 0.7s;
 }

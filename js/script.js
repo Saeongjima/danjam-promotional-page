@@ -1,18 +1,32 @@
+let inRange = false; // 스크롤이 범위 내에 있는지 여부를 추적하는 변수
+
 document.addEventListener('scroll', function() {
     const scrollY = window.scrollY;
 
-    showElements('.section2-shortline, .section2-group');
-    
-    if (scrollY >= 600 && scrollY <= 1800) {
-        console.log('ScrollY:', scrollY);
-        restartAnimation('.section2-shortline, .section2-group');
-    }
-    
+    // 범위 안에 있을 때만 애니메이션 실행
+    if (scrollY >= 300 && scrollY <= 1800) {
+        inRange = true; // 스크롤이 범위 내에 있음을 표시
+        showElements('.section2-shortline, .section2-group');
 
-    if (scrollY < 100 || scrollY > 2000) {
+        // 애니메이션이 실행되지 않은 경우에만 애니메이션 실행
+        if (!animationExecuted) {
+            console.log('ScrollY:', scrollY);
+            restartAnimation('.section2-shortline, .section2-group');
+            animationExecuted = true; // 애니메이션이 실행되었음을 표시
+        }
+    } else {
+        // 범위를 벗어나면 애니메이션 실행 여부를 재설정
+        inRange = false;
+        animationExecuted = false;
         hideElements('.section2-shortline, .section2-group');
     }
 
+    // 범위를 벗어나서 다시 범위 내에 들어왔을 때 애니메이션을 다시 실행
+    if (!animationExecuted && inRange) {
+        console.log('ScrollY:', scrollY);
+        restartAnimation('.section2-shortline, .section2-group');
+        animationExecuted = true; // 애니메이션이 실행되었음을 표시
+    }
 });
 
 // 애니메이션을 다시 시작하는 함수
@@ -35,8 +49,8 @@ function showElements(selector) {
 
 // 요소를 숨기는 함수
 function hideElements(selector) {
-const elements = document.querySelectorAll(selector);
-elements.forEach(element => {
-    element.style.display = 'none';
-});
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(element => {
+        element.style.display = 'none';
+    });
 }
