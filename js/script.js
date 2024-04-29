@@ -1,6 +1,7 @@
 let ranges = [
     { start: 300, end: 1800, elements: '.section2-shortline, .section2-group' },
-    { start: 1500, end: 2500, elements: '.section3-group, .section3-down-arrow, .section3-shortline' }
+    { start: 1500, end: 3000, elements: '.section3-group, .section3-down-arrow, .section3-shortline' },
+    { start: 2500, end: 4000, elements: '.section4-shortline, .section4-group1, .section4-group2, .section4-group3'}
 ];
 
 let animationExecuted = false; // 애니메이션이 실행되었는지 여부를 추적하는 변수
